@@ -16,7 +16,7 @@
 #include <linux/mnt_namespace.h>
 #include "internal.h"
 #include "mount.h"
-#include <linux/susfs.h>
+#include "susfs.h"
 
 LIST_HEAD(LH_SUS_PATH);
 LIST_HEAD(LH_SUS_KSTAT_SPOOFER);
