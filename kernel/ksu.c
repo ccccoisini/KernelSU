@@ -12,7 +12,7 @@
 #include "throne_tracker.h"
 
 #ifdef CONFIG_KSU_SUSFS
-#include "susfs.h"
+#include <linux/susfs.h>
 #endif
 
 static struct workqueue_struct *ksu_workqueue;
