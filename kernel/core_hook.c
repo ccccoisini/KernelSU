@@ -45,7 +45,7 @@
 #include "kernel_compat.h"
 
 #ifdef CONFIG_KSU_SUSFS
-#include <linux/susfs.h>
+#include "susfs.h"
 #endif
 
 static bool ksu_module_mounted = false;
