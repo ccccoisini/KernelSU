@@ -394,7 +394,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_add_sus_path((struct st_susfs_sus_path __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_ADD_SUS_PATH -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 #endif //#ifdef CONFIG_KSU_SUSFS_SUS_PATH
@@ -410,7 +410,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_add_sus_mount((struct st_susfs_sus_mount __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_ADD_SUS_MOUNT -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 #endif //#ifdef CONFIG_KSU_SUSFS_SUS_MOUNT
@@ -426,7 +426,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_add_sus_kstat((struct st_susfs_sus_kstat __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_ADD_SUS_KSTAT -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 		if (arg2 == CMD_SUSFS_UPDATE_SUS_KSTAT) {
@@ -440,7 +440,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_update_sus_kstat((struct st_susfs_sus_kstat __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_UPDATE_SUS_KSTAT -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 		if (arg2 == CMD_SUSFS_ADD_SUS_KSTAT_STATICALLY) {
@@ -454,7 +454,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_add_sus_kstat((struct st_susfs_sus_kstat __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_ADD_SUS_KSTAT_STATICALLY -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
         }
 #endif //#ifdef CONFIG_KSU_SUSFS_SUS_KSTAT
@@ -470,7 +470,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_add_sus_maps((struct st_susfs_sus_maps __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_ADD_SUS_MAPS -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 		if (arg2 == CMD_SUSFS_UPDATE_SUS_MAPS) {
@@ -484,7 +484,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_update_sus_maps((struct st_susfs_sus_maps __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_UPDATE_SUS_MAPS -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 		if (arg2 == CMD_SUSFS_ADD_SUS_MAPS_STATICALLY) {
@@ -498,7 +498,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_add_sus_maps((struct st_susfs_sus_maps __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_ADD_SUS_MAPS_STATICALLY -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 #endif //#ifdef CONFIG_KSU_SUSFS_SUS_MAPS
@@ -514,7 +514,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_add_sus_proc_fd_link((struct st_susfs_sus_proc_fd_link __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_ADD_SUS_PROC_FD_LINK -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 #endif //#ifdef CONFIG_KSU_SUSFS_SUS_PROC_FD_LINK
@@ -530,7 +530,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_add_sus_memfd((struct st_susfs_sus_memfd __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_ADD_SUS_MEMFD -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 #endif //#ifdef CONFIG_KSU_SUSFS_SUS_MEMFD
@@ -546,7 +546,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_add_try_umount((struct st_susfs_try_umount __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_ADD_TRY_UMOUNT -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 #endif //#ifdef CONFIG_KSU_SUSFS_TRY_UMOUNT
@@ -562,7 +562,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 			}
 			error = susfs_set_uname((struct st_susfs_uname __user*)arg3);
 			pr_info("susfs: CMD_SUSFS_SET_UNAME -> ret: %d\n", error);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 #endif //#ifdef CONFIG_KSU_SUSFS_SPOOF_UNAME
@@ -573,7 +573,7 @@ int ksu_handle_prctl(int option, unsigned long arg2, unsigned long arg3,
 				return 0;
 			}
 			susfs_set_log(arg3);
-			copy_to_user((void __user*)arg5, &error, sizeof(error));
+			(void)copy_to_user((void __user*)arg5, &error, sizeof(error));
 			return 0;
 		}
 #endif //#ifdef CONFIG_KSU_SUSFS_ENABLE_LOG
